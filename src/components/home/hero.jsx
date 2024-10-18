@@ -2,49 +2,50 @@ import React from "react";
 
 const HeroCard = () => {
   return (
-    <div className="flex-col justify-center p-10 items-center h-screen">
+    <div className="bg-black flex justify-center w-full -my-10 h-screen items-center">
       {/* Container for Card and Animation */}
-      <div
-        className="flex flex-row items-center mx-auto w-fit p-10 bg-black rounded-lg"
-        style={{
-          boxShadow:
-            "0 4px 20px rgba(0, 0, 0, 0.5), 0 4px 30px rgba(0, 0, 255, 0.5)", // Updated to blue shade
-        }}
-      >
+      <div className="flex flex-row items-center mx-auto w-5/6 p-6 bg-transparent rounded-lg shadow-inner shadow-purple-500/50">
         {/* Card Section */}
-        <div className="flex flex-col items-center justify-start w-full mr-10">
-          <div className="mb-6">
+        <div className="flex flex-col items-center justify-center w-full mr-6 border-r-2 border-purple-500/50 p-4">
+          <div className="mb-4">
             <img
-              className="w-32 h-32 rounded-full shadow-md"
+              className="w-48 h-48 rounded-full shadow-md" // Increased size for profile image
               src="https://avatars.githubusercontent.com/u/162581534?v=4"
               alt="profile photo"
             />
           </div>
-          <div className="text-2xl font-semibold text-white">Hi!</div>
-          <div className="text-3xl font-bold text-white">I am Abhiram AR</div>
-          <div className="text-4xl font-extrabold text-white mt-4">
-            Welcome to My Portfolio
+          <div className="text-3xl font-semibold text-white">Welcome</div>{" "}
+          {/* Increased font size */}
+          <div className="text-4xl font-bold text-white mt-1">
+            I am Abhiram AR
+          </div>{" "}
+          {/* Increased font size */}
+          <div className="text-lg text-gray-300 mt-2 text-center">
+            <p>GenAI | MLOps | Server-side Development</p>
           </div>
-
-          {/* Dummy Descriptions */}
-          <div className="mt-6 text-gray-400 text-center">
-            <p className="mb-2">GenAI | MLOps | Server-side Development</p>
-            <p className="mb-2">
-              I enjoy collaborating with teams to create efficient solutions and
-              am always eager to learn new technologies to enhance my skills.
+          {/* Additional Text Content */}
+          <div className="mt-4 text-center text-gray-300">
+            <p>
+              Passionate about creating innovative solutions and enhancing user
+              experiences.
+            </p>
+            <p>
+              I enjoy collaborating with teams to deliver high-quality products
+              and continuously learning new technologies.
             </p>
           </div>
         </div>
 
         {/* Lottie Animation Section */}
-        <div>
+        <div className="w-1/2">
           <iframe
             src="https://lottie.host/embed/673d3e6a-42af-4c99-84cb-98c6e3cb78c1/qpaITJ6QfE.json"
-            width="400"
-            height="400"
+            width="500" // Adjust the width as needed
+            height="500" // Adjust the height as needed
             frameBorder="0"
             allowFullScreen
             className="rounded-lg"
+            color="white"
           ></iframe>
         </div>
       </div>

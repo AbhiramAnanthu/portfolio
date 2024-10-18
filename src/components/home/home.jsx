@@ -1,7 +1,6 @@
 import NavBar from "./navbar";
 import Hero from "./hero";
 import About from "./aboutme";
-import ProjectsSection from "./ptoject";
 import ContactSection from "./contact";
 import "../home/home.css";
 
@@ -12,7 +11,6 @@ function Home() {
         <NavBar />
         <Hero />
         <About />
-        <ProjectsSection />
         <ContactSection />
       </div>
     </>
