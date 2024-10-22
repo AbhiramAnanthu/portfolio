@@ -48,11 +48,12 @@ const ContactSection = () => {
       <div className="container mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-white">Contact Me</h2>
+          <h2 className="text-4xl font-bold text-purple-500">
+            Contact Me
+          </h2>
         </div>
-
         {/* Contact Icons */}
-        <div className="flex flex-row justify-center space-x-8">
+        <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6">
           {contacts.map((contact, index) => (
             <div key={index} className="flex flex-col items-center">
               {contact.link ? (

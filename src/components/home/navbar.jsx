@@ -5,11 +5,10 @@ import Profile from "../../assets/profile";
 
 function NavBar() {
   return (
-    <nav className="bg-black shadow-md py-5">
-      <div className="container mx-auto flex flex-row justify-between items-center space-x-6 px-10 py-2">
+    <nav className="bg-black shadow-md py-5 w-screen">
+      <div className="container mx-auto flex flex-row justify-between items-center space-x-6 px-9 pt-2">
         <ToggleSelector name="projects" id="projects" icon={<CodeIcon />} />
         <ToggleSelector name="contact" id="contact" icon={<MailIcon />} />
-        {/* <ToggleSelector name="profile" id="profile" icon={<Profile />} /> */}
       </div>
     </nav>
   );
@@ -22,19 +21,17 @@ function ToggleSelector(props) {
     <div className="relative">
       <button
         id={props.id}
-        className={`flex flex-row justify-center items-center text-white transition-all duration-300 ease-in-out px-3 py-2 rounded-2xl${
-          isHovered ? "bg-opacity-50 backdrop-blur bg-gray-900" : ""
+        className={`flex justify-evenly items-center text-white transition-all duration-300 ease-in-out px-4 py-3 rounded-2xl ${
+          isHovered ? "bg-opacity-50 backdrop-blur bg-dark" : ""
         }`}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         style={{
-          boxShadow: isHovered
-            ? "0 4px 15px rgba(0, 132, 255, 0.5)"
-            : "none",
+          boxShadow: isHovered ? "0 4px 15px rgba(0, 122, 255, 0.5)" : "none",
         }}
       >
         <div
-          className={`flex items-center justify-center transition-transform duration-300 ease-in-out ${
+          className={`flex items-center justify transition-transform duration-400 ease-in-out ${
             isHovered ? "transform -translate-x-1" : "transform translate-x-0"
           }`}
         >

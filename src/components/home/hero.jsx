@@ -1,56 +1,59 @@
 import React from "react";
 
-const HeroCard = () => {
+function Hero() {
   return (
-    <div className="bg-black flex justify-center w-full -my-10 h-screen items-center">
-      {/* Container for Card and Animation */}
-      <div className="flex flex-row items-center mx-auto w-5/6 p-6 bg-transparent rounded-lg shadow-inner shadow-purple-500/50">
-        {/* Card Section */}
-        <div className="flex flex-col items-center justify-center w-full mr-6 border-r-2 border-purple-500/50 p-4">
-          <div className="mb-4">
+    <div className="flex justify-center items-center w-screen h-screen bg-black font-roboto ">
+      <section className="grid gap-6 px-10 md:grid-cols-2 w-5/6 md:w-10/12 lg:w-5/6 lg:h-3/4 justify-center items-center border border-gray-300/20 shadow-inner shadow-lg shadow-purple-500/20">
+        <div className="p-4 text-center md:text-left lg:text-left">
+          <div className="mb-6">
             <img
-              className="w-48 h-48 rounded-full shadow-md" // Increased size for profile image
               src="https://avatars.githubusercontent.com/u/162581534?v=4"
-              alt="profile photo"
+              alt="profile-Abhiram A R"
+              className="w-32 h-32 md:w-48 md:h-48 lg:w-48 lg:h-48 rounded-full shadow-md mx-auto md:mx-0"
             />
           </div>
-          <div className="text-3xl font-semibold text-white">Welcome</div>{" "}
-          {/* Increased font size */}
-          <div className="text-4xl font-bold text-white mt-1">
-            I am Abhiram AR
-          </div>{" "}
-          {/* Increased font size */}
-          <div className="text-lg text-gray-300 mt-2 text-center">
-            <p>GenAI | MLOps | Server-side Development</p>
-          </div>
-          {/* Additional Text Content */}
-          <div className="mt-4 text-center text-gray-300">
-            <p>
-              Passionate about creating innovative solutions and enhancing user
-              experiences.
+          <div className="ml-3">
+            <h1 className="text-3xl text-purple-500 md:text-4xl font-bold mb-2">
+              Hi
+            </h1>
+            <h2 className="text-2xl text-purple-500 md:text-3xl font-semibold mb-2">
+              I am Abhiram A R
+            </h2>
+            <p className="text-lg md:text-xl text-white mb-4 italic">
+              Passionate about leveraging AI to solve real-world problems and
+              create innovative solutions.
             </p>
-            <p>
-              I enjoy collaborating with teams to deliver high-quality products
-              and continuously learning new technologies.
-            </p>
+            <button className="flex items-center justify-center mx-auto md:mx-0 border border-purple-500 rounded-lg px-4 py-2 text-white transition-all duration-300 ease-in-out hover:text-opacity-50 hover:shadow-lg mt-4">
+              <span>See More</span>
+              <svg
+                className="ml-2 w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </button>
           </div>
         </div>
-
-        {/* Lottie Animation Section */}
-        <div className="w-1/2">
+        <div className="flex justify-center items-center mt-6 md:mt-0">
           <iframe
             src="https://lottie.host/embed/673d3e6a-42af-4c99-84cb-98c6e3cb78c1/qpaITJ6QfE.json"
-            width="500" // Adjust the width as needed
-            height="500" // Adjust the height as needed
+            className="w-48 h-48 md:w-[200px] md:h-[200px] lg:w-[400px] lg:h-[400px] rounded-lg"
             frameBorder="0"
             allowFullScreen
-            className="rounded-lg"
             color="white"
           ></iframe>
         </div>
-      </div>
+      </section>
     </div>
   );
-};
+}
 
-export default HeroCard;
+export default Hero;

@@ -1,16 +1,18 @@
 import NavBar from "./navbar";
 import Hero from "./hero";
-import About from "./aboutme";
 import ContactSection from "./contact";
+import AboutMe from "./aboutme";
+import ProjectSectionConsult from "./project";
 import "../home/home.css";
 
 function Home() {
   return (
     <>
-      <div className="home_wrap">
+      <div className="w-full overflow-x-hidden">
         <NavBar />
         <Hero />
-        <About />
+        <AboutMe />
+        <ProjectSectionConsult />
         <ContactSection />
       </div>
     </>
