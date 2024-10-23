@@ -1,5 +1,5 @@
 import React from "react";
-
+import HomeIcon from "../../assets/home";
 function ProjectCard() {
   return (
     <div className="w-5/6 md:w-1/2 lg:w-[400px] bg-slate-950 text-white p-5 rounded-lg border border-gray-500/40 shadow-inner shadow-purple-500/20 m-4">
@@ -31,15 +31,30 @@ function ProjectCard() {
 
 function ProjectDisplay() {
   return (
-    <div className="flex flex-col justify-start items-start pt-4 md:justify-start md:items-start lg:justify-start lg:items-start border p-4 w-screen h-screen bg-black">
-      <h1 className="text-white text-3xl md:text-5xl text-left font-roboto p-2 mt-2">
-        PROJECTS
-      </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-screen px-4">
-        <ProjectCard />
-        <ProjectCard />
+    <div>
+      <NavBar />
+      <div className="flex flex-col justify-start items-start pt-4 md:justify-start md:items-start lg:justify-start lg:items-start p-4 w-full overflow-x-hidden h-screen bg-black">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-screen px-4">
+          <ProjectCard />
+          <ProjectCard />
+        </div>
       </div>
     </div>
+  );
+}
+
+function NavBar() {
+  return (
+    <nav className="bg-black px-4 py-5">
+      <div className="flex justify-start items-center">
+        <button className="text-white border border-gray-500/40 px-4 py-2 rounded-lg transition-all duration-200 ease-in-out hover:opacity-60">
+          <a href="/">
+            <HomeIcon />
+          </a>
+        </button>
+        <h1 className="text-white text-3xl font-bold px-4">Projects</h1>
+      </div>
+    </nav>
   );
 }
 

@@ -1,14 +1,11 @@
 import React, { useState } from "react";
-import CodeIcon from "../../assets/code";
-import MailIcon from "../../assets/mail";
-import Profile from "../../assets/profile";
 
-function NavBar() {
+function NavBar(props) {
   return (
     <nav className="bg-black shadow-md py-5 w-screen">
       <div className="container mx-auto flex flex-row justify-between items-center space-x-6 px-9 pt-2">
-        <ToggleSelector name="projects" id="projects" icon={<CodeIcon />} />
-        <ToggleSelector name="contact" id="contact" icon={<MailIcon />} />
+        <ToggleSelector name="projects" id="projects" icon={props.icon1} />
+        <ToggleSelector name="contact" id="contact" icon={props.icon2} />
       </div>
     </nav>
   );
