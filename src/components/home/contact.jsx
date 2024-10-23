@@ -9,36 +9,36 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 const contacts = [
   {
     title: "Phone",
-    info: "+123 456 7890",
+    info: "+91 8547376353",
     icon: <PhoneIcon />,
   },
   {
     title: "Email",
-    info: "email@example.com",
+    info: "abhiramajithr@gmail.com",
     icon: <EmailIcon />,
   },
   {
     title: "Instagram",
-    info: "@yourusername",
+    info: "@abhiram_.ajith",
     icon: <InstagramIcon />,
-    link: "https://instagram.com",
+    link: "https://www.instagram.com/abhiram_.ajith/",
   },
   {
     title: "Discord",
-    info: "yourusername#1234",
+    info: "abhiram_59811",
     icon: <DiscordIcon />,
   },
   {
     title: "LinkedIn",
-    info: "yourprofile",
+    info: "abhiram-a-r-3a064b290",
     icon: <LinkedInIcon />,
-    link: "https://linkedin.com",
+    link: "https://www.linkedin.com/in/abhiram-a-r-3a064b290/",
   },
   {
     title: "GitHub",
-    info: "yourusername",
+    info: "AbhiramAnanthu",
     icon: <GitHubIcon />,
-    link: "https://github.com",
+    link: "https://github.com/AbhiramAnanthu",
   },
 ];
 
@@ -48,9 +48,7 @@ const ContactSection = () => {
       <div className="container mx-auto px-4">
         {/* Heading */}
         <div className="text-center mb-8">
-          <h2 className="text-4xl font-bold text-purple-500">
-            Contact Me
-          </h2>
+          <h2 className="text-4xl font-bold text-purple-500">Contact Me</h2>
         </div>
         {/* Contact Icons */}
         <div className="grid grid-cols-2 gap-6 md:grid-cols-3 lg:grid-cols-6">

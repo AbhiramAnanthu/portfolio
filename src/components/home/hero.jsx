@@ -3,7 +3,7 @@ import React from "react";
 function Hero() {
   return (
     <div className="flex justify-center items-center w-screen h-screen bg-black font-roboto ">
-      <section className="grid gap-6 px-10 md:grid-cols-2 w-5/6 md:w-10/12 lg:w-5/6 lg:h-3/4 justify-center items-center border border-gray-300/20 shadow-inner shadow-lg shadow-purple-500/20">
+      <section className="grid gap-6 px-10 py-5 md:grid-cols-2 w-5/6 md:w-10/12 lg:w-5/6 lg:h-3/4 -mt-10 justify-center items-center border border-gray-300/20 shadow-inner shadow-purple-500/20">
         <div className="p-4 text-center md:text-left lg:text-left">
           <div className="mb-6">
             <img
@@ -14,14 +14,14 @@ function Hero() {
           </div>
           <div className="ml-3">
             <h1 className="text-3xl text-purple-500 md:text-4xl font-bold mb-2">
-              Hi
+              HI
             </h1>
             <h2 className="text-2xl text-purple-500 md:text-3xl font-semibold mb-2">
               I am Abhiram A R
             </h2>
-            <p className="text-lg md:text-xl text-white mb-4 italic">
-              Passionate about leveraging AI to solve real-world problems and
-              create innovative solutions.
+            <p className="text-lg md:text-xl text-white mb-4">
+              GenAI <span className="text-purple-500">|</span> MLOPS{" "}
+              <span className="text-purple-500">|</span> Server Side Development
             </p>
             <button className="flex items-center justify-center mx-auto md:mx-0 border border-purple-500 rounded-lg px-4 py-2 text-white transition-all duration-300 ease-in-out hover:text-opacity-50 hover:shadow-lg mt-4">
               <span>See More</span>
