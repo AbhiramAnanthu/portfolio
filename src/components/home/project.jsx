@@ -15,23 +15,25 @@ function ProjectSectionConsult() {
           creative solutions to life and drive impactful results.
         </p>
         <p className="text-lg md:text-xl mb-4">Please follow the link</p>
-        <button className="flex items-center justify-center mx-auto border border-purple-500 rounded-lg px-4 py-2 text-white transition-all duration-300 ease-in-out hover:text-opacity-50 hover:shadow-lg mt-4">
-          <span>Collab</span>
-          <svg
-            className="ml-2 w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M9 5l7 7-7 7"
-            ></path>
-          </svg>
-        </button>
+        <a href="/contact-form">
+          <button className="flex items-center justify-center mx-auto border border-purple-500 rounded-lg px-4 py-2 text-white transition-all duration-300 ease-in-out hover:text-opacity-50 hover:shadow-lg mt-4">
+            <span>Collab</span>
+            <svg
+              className="ml-2 w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </button>
+        </a>
       </div>
     </section>
   );

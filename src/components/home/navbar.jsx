@@ -16,8 +16,8 @@ function ToggleSelector(props) {
 
   return (
     <div className="relative">
-      <button
-        id={props.id}
+      <a
+        href={`/${props.name}`}
         className={`flex justify-evenly items-center text-white transition-all duration-300 ease-in-out px-4 py-3 rounded-2xl ${
           isHovered ? "bg-opacity-50 backdrop-blur bg-dark" : ""
         }`}
@@ -44,12 +44,10 @@ function ToggleSelector(props) {
               isHovered ? "opacity-100" : "opacity-0"
             }`}
           >
-            <a href={`/${props.name}`} className="ml-3 text-white">
-              {props.name}
-            </a>
+            <span className="ml-3 text-white">{props.name}</span>
           </div>
         </div>
-      </button>
+      </a>
     </div>
   );
 }
