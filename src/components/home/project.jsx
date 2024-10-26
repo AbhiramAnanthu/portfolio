@@ -15,7 +15,7 @@ function ProjectSectionConsult() {
           creative solutions to life and drive impactful results.
         </p>
         <p className="text-lg md:text-xl mb-4">Please follow the link</p>
-        <a href="/contact-form">
+        <a href="/collab-form">
           <button className="flex items-center justify-center mx-auto border border-purple-500 rounded-lg px-4 py-2 text-white transition-all duration-300 ease-in-out hover:text-opacity-50 hover:shadow-lg mt-4">
             <span>Collab</span>
             <svg
