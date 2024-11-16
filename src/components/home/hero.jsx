@@ -14,14 +14,15 @@ function Hero() {
           </div>
           <div className="ml-3">
             <h1 className="text-3xl text-purple-500 md:text-4xl font-bold mb-2">
-              HI
+              Hi there !
             </h1>
+            {/* <h3 className="text-xl text-white">Thanks for stopping by</h3> */}
             <h2 className="text-2xl text-purple-500 md:text-3xl font-semibold mb-2">
               I am Abhiram A R
             </h2>
             <p className="text-lg md:text-xl text-white mb-4">
-              GenAI <span className="text-purple-500">|</span> MLOPS{" "}
-              <span className="text-purple-500">|</span> Server Side Development
+              Student <span className="text-purple-500">|</span> Learner {""}
+              <span className="text-purple-500">|</span> Problem Solver
             </p>
             <a href="/profile">
               <button className="flex items-center justify-center mx-auto md:mx-0 border border-purple-500 rounded-lg px-4 py-2 text-white transition-all duration-300 ease-in-out hover:text-opacity-50 hover:shadow-lg mt-4">

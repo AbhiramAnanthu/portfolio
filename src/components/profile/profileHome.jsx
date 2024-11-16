@@ -2,12 +2,32 @@ import React from "react";
 import { Home } from "@mui/icons-material";
 
 export default function ProfileMain() {
+  const profileDetails = [
+    {
+      header: "High School",
+      description: `I completed my secondary education at Amrita Vidyalayam, Trivandrum,
+          Kerala, specializing in Science with Computer Science. I scored 92% in
+          my final board exams, highlighting my dedication and academic
+          excellence.`,
+    },
+    {
+      header: "Undergraduation",
+      description: `I'm currently pursuing a BTech in Computer Science and Engineering
+              at Sree Chithra Thirunal College Of Engineering,
+              Thiruvananthapuram, Kerala. Now in my second year, I'm diving deep
+              into technology and software development.`,
+    },
+    {
+      header: "Expertise",
+      description: `I specialize in web development using React, Node, Flask, Django, and Docker. Proficient in Python scripting with Selenium for web scraping. Currently exploring generative AI technologies like LLMs, image, and video generators.`,
+    },
+  ];
   return (
-    <div className="text-white w-screen h-screen bg-black p-6 font-roboto overflow-auto">
-      <nav className="bg-slate-950 px-4 py-2 flex items-center justify-start mb-8 shadow-lg shadow-gray-600/30">
+    <div className="text-white w-screen h-screen p-6 font-roboto overflow-auto bg-black">
+      <nav className="px-4 py-2 flex items-center justify-start mb-8 shadow-lg shadow-gray-600/30">
         <div className="text-purple-500 p-3 flex flex-col items-center mr-2">
           <a href="/">
-            <Home fontSize="large" />
+            <Home fontSize="medium" />
           </a>
         </div>
         <div className="text-white text-2xl p-3 text-center flex items-center justify-center mt-1">
@@ -15,46 +35,23 @@ export default function ProfileMain() {
         </div>
       </nav>
       <section className="p-3">
-        <h1 className="text-4xl text-purple-500 mb-8">Education</h1>
-        <div className="mb-8 p-4 bg-slate-950 rounded-lg">
-          <h1 className="text-2xl text-purple-400 mb-4">High School</h1>
-          <p className="mb-2">
-            I completed my secondary education at Amrita Vidyalayam in
-            Trivandrum, Kerala, India. My focus was on the Science stream with
-            Computer Science as a major subject. I achieved an impressive score
-            of 92% in my final board exams, showcasing my dedication and
-            academic excellence.
-          </p>
-        </div>
-        <div className="p-4 bg-slate-950 rounded-lg">
-          <h1 className="text-2xl text-purple-400 mb-4">Undergraduation</h1>
-          <p className="mb-2">
-            Currently, I am pursuing a Bachelor of Technology (BTech) in
-            Computer Science and Engineering at Sree Chithra Thirunal College Of
-            Engineering, located in Thiruvananthapuram, Kerala, India. I am in
-            my second year of the program, diving deep into the realms of
-            technology and software development.
-          </p>
+        <h1 className="text-4xl text-purple-500 mb-8">Academics</h1>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          {profileDetails.map((item, index) => (
+            <Card
+              key={index}
+              header={item.header}
+              description={item.description}
+            />
+          ))}
         </div>
       </section>
       <section className="p-3">
-        <h1 className="text-4xl text-purple-500 mb-8">Skills</h1>
-        <div className="mb-8 p-4 bg-slate-950 rounded-lg">
-          <p className="mb-2">
-            I am a passionate web developer with a keen interest in leveraging
-            generative AI to create innovative solutions. My goal is to merge
-            the power of AI with seamless web interfaces to develop tools and
-            platforms that automate tasks, enhance user experiences, and provide
-            intelligent services. I thrive on experimenting with various
-            technologies and frameworks, always pushing the boundaries of what’s
-            possible in the digital realm.
-          </p>
-        </div>
-        <div className="grid row-2">
-          <h1 className="pb-4 text-purple-500 text-4xl mb-8">
-            Tech Stacks I am working
+        <div className="grid gap-4">
+          <h1 className="pb-2 text-purple-500 text-4xl mb-8">
+            My Toolset and Technologies
           </h1>
-          <div className="flex flex-wrap justify-start items-center gap-4 bg-slate-950">
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 rounded-lg">
             {[
               {
                 name: "Python",
@@ -117,7 +114,7 @@ export default function ProfileMain() {
             ].map((tech) => (
               <div
                 key={tech.name}
-                className="flex flex-col items-center p-3 cursor-pointer transition-all duration-200 hover:scale-150"
+                className="flex flex-col items-center p-3 cursor-pointer transition-all duration-200 hover:scale-110"
               >
                 <img
                   src={tech.image}
@@ -131,5 +128,18 @@ export default function ProfileMain() {
         </div>
       </section>
     </div>
+  );
+}
+
+function Card(props) {
+  return (
+    <>
+      <div className="mb-8 p-4 rounded-lg w-full h-auto flex flex-col align-center justify-center">
+        <h1 className="text-2xl text-purple-400 mb-4 text-center">
+          {props.header}
+        </h1>
+        <p className="mb-2 text-center">{props.description}</p>
+      </div>
+    </>
   );
 }
