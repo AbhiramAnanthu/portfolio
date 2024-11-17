@@ -5,6 +5,7 @@ export default {
     extend: {
       colors: {
         dark: "#121212",
+        darkGray: "#1C1C1C",
       },
       fontFamily: {
         roboto: ["Roboto"],
