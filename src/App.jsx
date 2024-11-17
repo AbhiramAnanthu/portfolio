@@ -7,7 +7,7 @@ import ContactForm from "./components/forms/contactForm";
 import "./App.css";
 function App() {
   return (
-    <>
+    <div>
       <Router>
         <Routes>
           <Route path="/" element={<Home />}></Route>
@@ -17,7 +17,7 @@ function App() {
           <Route path="/contact" element={<ContactForm />} />
         </Routes>
       </Router>
-    </>
+    </div>
   );
 }
 

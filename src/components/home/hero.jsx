@@ -2,8 +2,8 @@ import React from "react";
 
 function Hero() {
   return (
-    <div className="flex justify-center items-center w-screen h-screen bg-black font-roboto ">
-      <section className="grid gap-6 px-10 py-5 md:grid-cols-2 w-5/6 md:w-10/12 lg:w-5/6 lg:h-3/4 -mt-20 justify-center items-center border border-gray-300/20 shadow-inner shadow-purple-500/20">
+    <div className="flex justify-center items-center w-screen h-[80vh] lg:w-11/12 bg-black font-roboto mx-auto mt-4">
+      <section className="grid gap-6 px-10 py-5 md:grid-cols-2 w-5/6 md:w-10/12 lg:w-5/6 lg:h-3/4 justify-center items-center">
         <div className="p-4 text-center md:text-left lg:text-left">
           <div className="mb-6">
             <img
