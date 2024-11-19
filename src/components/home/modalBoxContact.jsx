@@ -69,7 +69,7 @@ export default function Modal({ isOpen, onClose }) {
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50 backdrop-blur-sm">
       <div className="bg-gray-800 rounded-lg shadow-lg p-6 w-3/4 lg:w-1/2 text-white">
         <div className="flex flex-row items-center justify-between py-8 pt-2 lg:pb-4">
-          <h2 className="text-lg font-bold text-center">Contact Details</h2>
+          <h2 className="text-lg font-bold text-center text-purple-500">Contact Details</h2>
           <button className=" text-white lg:px-4 rounded" onClick={onClose}>
             &#10006;
           </button>

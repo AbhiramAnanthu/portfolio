@@ -26,72 +26,60 @@ export default function ProfileMain() {
   const techDetails = [
     {
       header: "Python",
-      description:
-        "A versatile programming language known for its readability and broad applicability in web development, data analysis, artificial intelligence, and scientific computing.",
-      link: "https://docs.python.org/3.13/whatsnew/3.13.html",
       img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/172px-Python-logo-notext.svg.png",
     },
     {
       header: "LangChain",
-      description:
-        "A framework for building applications with large language models, offering tools for chaining together language model queries and operations.",
-      link: "https://python.langchain.com/docs/introduction/",
       img: "https://media.licdn.com/dms/image/v2/D4D12AQF8MwWNbgUZ_g/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1697534805076?e=2147483647&v=beta&t=oidQ7KQtMb1CVUj-mRzfSaKSFlAHdvzu4z0FZ1VsU10",
     },
     {
       header: "Flask",
-      description:
-        "A lightweight WSGI web application framework in Python designed to make getting started quick and easy, with the ability to scale up to complex applications.",
-      link: "https://python-adv-web-apps.readthedocs.io/en/latest/index.html",
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWjnhJd3QLmFGb_jbOEnKahMeUSuNzpnBZYg&s",
     },
     {
       header: "Django",
-      description:
-        "A high-level Python web framework that encourages rapid development and clean, pragmatic design, focusing on automation and adhering to the DRY principle.",
-      link: "https://docs.djangoproject.com/en/5.1/",
       img: "https://static.djangoproject.com/img/logos/django-logo-positive.svg",
     },
     {
       header: "JavaScript",
-      description:
-        "A dynamic, high-level programming language that's essential for creating interactive web applications and known for its versatility across front-end and back-end development.",
-      link: "https://developer.mozilla.org/en-US/docs/Learn/JavaScript",
       img: "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg",
     },
     {
       header: "Node.js",
-      description:
-        "A JavaScript runtime built on Chrome's V8 JavaScript engine, enabling server-side scripting to produce dynamic web page content before the page is sent to the user's web browser.",
-      link: "https://nodejs.org/en/learn/getting-started/introduction-to-nodejs",
       img: "https://nodejs.org/static/logos/nodejsLight.svg",
     },
     {
       header: "React",
-      description:
-        "A JavaScript library for building user interfaces, developed by Facebook, making it effortless to create interactive UIs with efficient updates and rendering.",
-      link: "https://react.dev/learn",
       img: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
     },
     {
       header: "Docker",
-      description:
-        "A platform designed to create, deploy, and run applications using containers, providing an easy way to deploy and manage applications consistently across various environments.",
-      link: "https://docs.docker.com/",
       img: "https://cdn.worldvectorlogo.com/logos/docker-4.svg",
     },
   ];
 
   return (
-    <div className="text-white w-screen h-screen p-6 font-roboto overflow-auto bg-black">
-      <nav className="px-4 py-2 flex items-center justify-start mb-8 shadow-sm shadow-darkGray">
+    <div className="text-white w-screen  h-screen p-6 font-roboto overflow-auto bg-black">
+      <nav className="px-4 py-2 flex items-center justify-start mb-8">
         <div className="text-purple-500 p-3 flex flex-col items-center mr-2">
           <a href="/">
-            <HomeIcon />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 h-6 text-gray-500"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              {" "}
+              <path d="M19 12H5" /> <path d="M12 19L5 12L12 5" />{" "}
+            </svg>
           </a>
         </div>
         <div className="text-white text-2xl p-3 text-center flex items-center justify-center mt-1">
-          Profile Insights
+          Profile
         </div>
       </nav>
 
@@ -100,7 +88,7 @@ export default function ProfileMain() {
           <h1 className="text-3xl text-purple-500 mb-8 text-center">
             Academics
           </h1>
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
             {profileDetails.map((item, index) => (
               <Card
                 key={index}
@@ -114,15 +102,9 @@ export default function ProfileMain() {
           <h1 className="text-3xl text-purple-500 mb-8 text-center">
             My Tech Toolkit
           </h1>
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid justify-items-center pt-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             {techDetails.map((item, index) => (
-              <Card2
-                key={index}
-                header={item.header}
-                description={item.description}
-                link={item.link}
-                img={item.img}
-              />
+              <Card2 key={index} header={item.header} img={item.img} />
             ))}
           </div>
         </section>
@@ -145,36 +127,18 @@ function Card(props) {
 function Card2(props) {
   return (
     <>
-      <div className="mb-8 p-4 border border-gray-500/50 rounded-lg w-full h-auto grid grid-col-1 gap-2 items-center justify-center cursor-pointer">
-        <h1 className="text-2xl text-white mb-4 text-center">{props.header}</h1>
-        <div className="flex flex-row justify-center items-center">
-          <img
-            src={props.img}
-            alt="tech-image"
-            className="w-[200px] h-[200px]"
-          />
-        </div>
-        <p className="mb-2 text-center text-gray-400">{props.description}</p>
-        <div className="flex flex-row items-center justify-center">
-          <a href={props.link}>
-            <button className="flex items-center justify-center mx-auto md:mx-0 border border-purple-500 rounded-lg px-4 py-2 text-white transition-all duration-300 ease-in-out hover:text-opacity-50 hover:shadow-lg mt-4">
-              <span>See More</span>
-              <svg
-                className="ml-2 w-4 h-4"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M9 5l7 7-7 7"
-                ></path>
-              </svg>
-            </button>
-          </a>
+      <div className="mb-8 p-4 border border-gray-500/50 rounded-lg w-[250px] h-auto grid grid-col-1 items-center justify-items-center my-auto cursor-pointer transition-all ease-in-out lg:hover:scale-110">
+        <div className="grid grid-cols-1 gap-3 justify-items-center">
+          <div>
+            <img
+              src={props.img}
+              alt="tech-image"
+              className="w-[80px] h-[80px]"
+            />
+          </div>
+          <div>
+            <h1 className="text-xl text-white text-center">{props.header}</h1>{" "}
+          </div>
         </div>
       </div>
     </>

@@ -35,8 +35,9 @@ function ProjectDisplay() {
       <NavBar />
       <div className="flex flex-col justify-start items-start pt-4 md:justify-start md:items-start lg:justify-start lg:items-start p-4 w-full overflow-x-hidden h-screen bg-black">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-screen px-4">
-          <ProjectCard />
-          <ProjectCard />
+          <div className="text-4xl lg:text-5xl text-white">
+            Will Be updated :)
+          </div>
         </div>
       </div>
     </div>
@@ -45,11 +46,23 @@ function ProjectDisplay() {
 
 function NavBar() {
   return (
-    <nav className="bg-black px-4 py-5">
+    <nav className="bg-black px-4 py-10">
       <div className="flex justify-start items-center">
-        <button className="text-white border border-gray-500/40 px-4 py-2 rounded-lg transition-all duration-200 ease-in-out hover:opacity-60">
+        <button className="text-white px-4 py-2 rounded-lg transition-all duration-200 ease-in-out hover:opacity-60">
           <a href="/">
-            <HomeIcon />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 h-6 text-gray-500"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              {" "}
+              <path d="M19 12H5" /> <path d="M12 19L5 12L12 5" />{" "}
+            </svg>
           </a>
         </button>
         <h1 className="text-white text-3xl font-bold px-4">Projects</h1>
