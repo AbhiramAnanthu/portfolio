@@ -9,6 +9,7 @@ export default {
       },
       fontFamily: {
         roboto: ["Roboto"],
+        montserrat: ["Montserrat"],
       },
     },
   },

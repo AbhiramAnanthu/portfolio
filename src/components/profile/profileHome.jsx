@@ -2,62 +2,6 @@ import React from "react";
 import HomeIcon from "../../assets/home";
 
 export default function ProfileMain() {
-  const profileDetails = [
-    {
-      header: "High School",
-      description: `I completed my secondary education at Amrita Vidyalayam, Trivandrum,
-          Kerala, specializing in Science with Computer Science. I scored 92% in
-          my final board exams, highlighting my dedication and academic
-          excellence.`,
-    },
-    {
-      header: "Undergraduation",
-      description: `I'm currently pursuing a BTech in Computer Science and Engineering
-              at Sree Chithra Thirunal College Of Engineering,
-              Thiruvananthapuram, Kerala. Now in my second year, I'm diving deep
-              into technology and software development.`,
-    },
-    {
-      header: "Expertise",
-      description: `I specialize in web development using React, Node, Flask, Django, and Docker. Proficient in Python scripting with Selenium for web scraping. Currently exploring generative AI technologies like LLMs, image, and video generators.`,
-    },
-  ];
-
-  const techDetails = [
-    {
-      header: "Python",
-      img: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/172px-Python-logo-notext.svg.png",
-    },
-    {
-      header: "LangChain",
-      img: "https://media.licdn.com/dms/image/v2/D4D12AQF8MwWNbgUZ_g/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1697534805076?e=2147483647&v=beta&t=oidQ7KQtMb1CVUj-mRzfSaKSFlAHdvzu4z0FZ1VsU10",
-    },
-    {
-      header: "Flask",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWjnhJd3QLmFGb_jbOEnKahMeUSuNzpnBZYg&s",
-    },
-    {
-      header: "Django",
-      img: "https://static.djangoproject.com/img/logos/django-logo-positive.svg",
-    },
-    {
-      header: "JavaScript",
-      img: "https://cdn.worldvectorlogo.com/logos/logo-javascript.svg",
-    },
-    {
-      header: "Node.js",
-      img: "https://nodejs.org/static/logos/nodejsLight.svg",
-    },
-    {
-      header: "React",
-      img: "https://cdn.worldvectorlogo.com/logos/react-2.svg",
-    },
-    {
-      header: "Docker",
-      img: "https://cdn.worldvectorlogo.com/logos/docker-4.svg",
-    },
-  ];
-
   return (
     <div className="text-white w-screen  h-screen p-6 font-roboto overflow-auto bg-black">
       <nav className="px-4 py-2 flex items-center justify-start mb-8">
@@ -82,65 +26,36 @@ export default function ProfileMain() {
           Profile
         </div>
       </nav>
-
-      <div className="grid grid-col-1 gap-4">
-        <section className="p-4">
-          <h1 className="text-3xl text-purple-500 mb-8 text-center">
-            Academics
-          </h1>
-          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
-            {profileDetails.map((item, index) => (
-              <Card
-                key={index}
-                header={item.header}
-                description={item.description}
-              />
-            ))}
-          </div>
-        </section>
-        <section className="p-4">
-          <h1 className="text-3xl text-purple-500 mb-8 text-center">
-            My Tech Toolkit
-          </h1>
-          <div className="grid justify-items-center pt-4 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-            {techDetails.map((item, index) => (
-              <Card2 key={index} header={item.header} img={item.img} />
-            ))}
-          </div>
-        </section>
-      </div>
+      <IntroductionSection />
     </div>
   );
 }
 
-function Card(props) {
+function IntroductionSection() {
   return (
-    <>
-      <div className="mb-8 p-4 rounded-lg w-full h-auto flex flex-col align-center justify-center cursor-pointer lg:transition-all  lg:hover:bg-gray-800">
-        <h1 className="text-2xl text-white mb-4 text-center">{props.header}</h1>
-        <p className="mb-2 text-center text-gray-400">{props.description}</p>
+    <div className="w-full flex flex-col md:flex-row border border-gray-200 rounded-lg shadow-lg justify-between items-center p-4">
+      <div className="py-2 px-3 md:ml-4 mb-4 md:mb-0">
+        <img
+          src="https://avatars.githubusercontent.com/u/162581534?v=4"
+          alt="profile"
+          className="w-24 h-24 md:w-48 md:h-48 lg:w-48 lg:h-48 rounded-full shadow-md mx-auto md:mx-0"
+        />
       </div>
-    </>
-  );
-}
-
-function Card2(props) {
-  return (
-    <>
-      <div className="mb-8 p-4 border border-gray-500/50 rounded-lg w-[250px] h-auto grid grid-col-1 items-center justify-items-center my-auto cursor-pointer transition-all ease-in-out lg:hover:scale-110">
-        <div className="grid grid-cols-1 gap-3 justify-items-center">
-          <div>
-            <img
-              src={props.img}
-              alt="tech-image"
-              className="w-[80px] h-[80px]"
-            />
-          </div>
-          <div>
-            <h1 className="text-xl text-white text-center">{props.header}</h1>{" "}
-          </div>
-        </div>
+      <div className="w-full md:w-3/4 px-3 py-2 md:mr-4 font-montserrat text-center md:text-left">
+        <h2 className="text-2xl font-semibold text-gray-300 mb-2">About Me</h2>
+        <p className="text-gray-300">
+          I am a passionate and driven second-year B.Tech student specializing
+          in Computer Science. My academic journey is enriched with hands-on
+          experience in data analysis, machine learning, and generative AI. I am
+          actively engaged in diverse projects, leveraging my skills in machine
+          learning, web development, and backend development to solve real-world
+          problems. My curiosity and commitment to continuous learning drive me
+          to explore the latest advancements in technology and apply them
+          innovatively. I thrive on challenges and am always eager to
+          collaborate with like-minded individuals to push the boundaries of
+          what's possible.
+        </p>
       </div>
-    </>
+    </div>
   );
 }
