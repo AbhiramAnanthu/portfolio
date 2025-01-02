@@ -1,6 +1,4 @@
 import Hero from './hero';
-import CodeIcon from '../../assets/code';
-import MailIcon from '../../assets/mail';
 
 function Home() {
   return (
