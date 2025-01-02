@@ -1,11 +1,15 @@
-import React from 'react';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import RouteButtons from './routeButtons';
 import TechStack from './techStack';
+import { React, useState } from 'react';
+import ContactModal from './contactSection';
+
 export default function Hero() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
-    <div className="flex flex-col justify-center align-center w-full h-full font-montserrat">
-      <div className="w-5/6 md:h-auto lg:h-auto mx-auto rounded-lg py-10">
+    <div className="flex flex-col justify-center align-center w-full h-screen font-montserrat">
+      <div className="w-5/6 md:h-auto lg:h-auto mx-auto rounded-lg py-6 md:py-8 lg:py-10">
         <div className="flex flex-col justify-center items-center mt-3">
           <div className="flex justify-center items-center w-full mx-auto mt-2">
             <img
@@ -31,16 +35,16 @@ export default function Hero() {
               </div>
             </div>
             <div className="text-gray-500 px-2 py-2 text-center">
-              <div className="flex flex-col md:flex-row lg:flex-row justify-center items-center align-center text-center">
-                <p className="text-sm md:text-lg lg:text-lg px-3">
+              <div className="flex flex-col md:flex-row lg:flex-row justify-center items-center align-center text-center mb-2 md:mb-1 lg:mb-0">
+                <p className="text-lg md:text-lg lg:text-lg px-3">
                   LLM Engineering
                 </p>
                 <span className="hidden md:inline text-blue-500">•</span>
-                <p className="text-sm md:text-lg lg:text-lg px-3">
+                <p className="text-lg md:text-lg lg:text-lg px-3">
                   Scripting & Automation
                 </p>
                 <span className="hidden md:inline text-blue-500">•</span>
-                <p className="text-sm md:text-lg lg:text-lg px-3">
+                <p className="text-lg md:text-lg lg:text-lg px-3">
                   Generative AI
                 </p>
               </div>
@@ -48,15 +52,33 @@ export default function Hero() {
           </div>
         </div>
         <div className="flex flex-row justify-center align-center items-center w-1/2 mx-auto">
-          <RouteButtons title="Projects" url="projects" />
-          <RouteButtons title="Contact" url="#" />
-          <RouteButtons title="Resume" url="#" />
+          <RouteButtons
+            title="Projects"
+            url="projects"
+            onClickRequired={false}
+            disabled={false}
+          />
+          <RouteButtons
+            title="Contact"
+            url="#"
+            onClickRequired={true}
+            isOpen={isOpen}
+            setIsOpen={setIsOpen}
+            disabled={false}
+          />
+          <RouteButtons
+            title="Resume"
+            url="#"
+            onClickRequired={false}
+            disabled={true}
+          />
+          <ContactModal isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>
         <div className="flex flex-col justify-center align-center ">
-          <TechStack />
-          <div className="flex justify-center align-center mt-2">
+          <div className="flex justify-center align-center mb-2">
             <p className="text-gray-600 text-center mt-2">Tech Stack</p>
           </div>
+          <TechStack />
         </div>
       </div>
     </div>

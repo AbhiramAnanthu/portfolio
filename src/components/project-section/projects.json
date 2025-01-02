@@ -1,0 +1,25 @@
+[
+  {
+    "title": "Personal Portfolio Website",
+    "projectState": "Completed",
+    "createdAt": "02-01-2025",
+    "updatedAt": "02-01-2025",
+    "description": [
+      {
+        "para1": {
+          "description": "<b>Abstract</b>: A personal portfolio website to showcase my projects, open-source contributions, and coding achievements. It will highlight my technical skills, certifications, and expertise, featuring interactive demonstrations and testimonials to attract potential employers and freelancing clients."
+        },
+        "para2": {
+          "description": "<br />"
+        },
+        "para3": {
+          "description": "<b>Tech Stacks</b>: React(UI), Tailwind CSS(UI), Vercel(Deployment)"
+        },
+        "para4": {
+          "description": "<b>Deployed at</b>: <a href='https://abhiramajith.vercel.app/' target='_blank'>https://username.com</a>"
+        }
+      }
+    ],
+    "githubLink": "https://github.com/AbhiramAnanthu/portfolio"
+  }
+]
