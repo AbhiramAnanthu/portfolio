@@ -56,7 +56,6 @@ export default function Hero() {
             title="Projects"
             url="projects"
             onClickRequired={false}
-            disabled={false}
           />
           <RouteButtons
             title="Contact"
@@ -64,13 +63,11 @@ export default function Hero() {
             onClickRequired={true}
             isOpen={isOpen}
             setIsOpen={setIsOpen}
-            disabled={false}
           />
           <RouteButtons
             title="Resume"
-            url="#"
+            url="https://drive.google.com/file/d/1LWAOBzt6erMIeNJUl1xxd2kUYsXWbvE3/view?usp=sharing"
             onClickRequired={false}
-            disabled={true}
           />
           <ContactModal isOpen={isOpen} setIsOpen={setIsOpen} />
         </div>

@@ -37,7 +37,7 @@ export default function ContactModal({ isOpen, setIsOpen }) {
         role="dialog"
         aria-modal="true"
       >
-        <div className="w-lg lg:w-1/2 h-42 mx-auto bg-slate-900 rounded-lg p-6 ">
+        <div className="w-lg lg:w-1/2 h-42 mx-auto bg-slate-900 rounded-lg p-6">
           <header className="flex justify-between items-center mb-4">
             <h1 className="text-2xl text-white">Contacts</h1>
             <button

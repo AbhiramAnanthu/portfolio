@@ -50,7 +50,7 @@ export default function TechStack() {
             <img
               src={stack.icon}
               alt={stack.title}
-              className="w-6 h-6 md:w-10 md:h-10 lg:w-10 lg:h-10 transition-all ease-in-out"
+              className="w-7 h-7 md:w-10 md:h-10 lg:w-10 lg:h-10 transition-all ease-in-out"
               onMouseEnter={() => setVisible(index)}
               onMouseLeave={() => setVisible(null)}
               key={index}

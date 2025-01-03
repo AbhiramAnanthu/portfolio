@@ -16,9 +16,9 @@ export default function ProjectCard(props) {
           <span className="text-sm text-center">{props.state}</span>
         </div>
       </div>
-      <div className="flex flex-col md:flex-row justify-start md:justify-between align-start md:align-center w-full md:w-3/4 md:mr-auto px-2 py-2">
-        <div className="flex justify-start align-center">
-          <span className="text-sm  text-gray-500">
+      <div className="flex flex-col md:flex-row justify-start md:justify-between lg:justify-between align-start md:align-center w-full md:w-3/4 md:mr-auto lg:w-1/2 px-2 py-2">
+        <div className="flex justify-start align-center mr-2 md:mr-0 lg:mr-2">
+          <span className="text-sm text-gray-500">
             Created at: {props.createdAt}
           </span>
         </div>

@@ -29,7 +29,7 @@ export default function ProjectsArray() {
                 createdAt={project.createdAt}
                 updatedAt={project.updatedAt}
                 description={project.description}
-                gitHubLink={project.gitHubLink}
+                gitHubLink={project.githubLink}
               />
             );
           })}
