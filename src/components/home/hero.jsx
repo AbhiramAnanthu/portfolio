@@ -37,15 +37,7 @@ export default function Hero() {
             <div className="text-gray-500 px-2 py-2 text-center">
               <div className="flex flex-col md:flex-row lg:flex-row justify-center items-center align-center text-center mb-2 md:mb-1 lg:mb-0">
                 <p className="text-lg md:text-lg lg:text-lg px-3">
-                  LLM Engineering
-                </p>
-                <span className="hidden md:inline text-blue-500">•</span>
-                <p className="text-lg md:text-lg lg:text-lg px-3">
-                  Scripting & Automation
-                </p>
-                <span className="hidden md:inline text-blue-500">•</span>
-                <p className="text-lg md:text-lg lg:text-lg px-3">
-                  Generative AI
+                  Backend Developer
                 </p>
               </div>
             </div>
