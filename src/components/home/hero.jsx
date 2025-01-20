@@ -58,7 +58,7 @@ export default function Hero() {
           />
           <RouteButtons
             title="Resume"
-            url="https://drive.google.com/file/d/1LWAOBzt6erMIeNJUl1xxd2kUYsXWbvE3/view?usp=sharing"
+            url="https://drive.google.com/file/d/1W4KR3hF-oB07DAdF0pS8u6n0iIcz7Ezi/view?usp=sharing"
             onClickRequired={false}
           />
           <ContactModal isOpen={isOpen} setIsOpen={setIsOpen} />
